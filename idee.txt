@@ -1,0 +1,5 @@
+ALE:
+FA per decisione variabili
+T-SNE per trovare k
+trovare k cluster
+regression su ognuno dei cluster
