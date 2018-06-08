@@ -1,0 +1,22 @@
+customers2018 = sales[sales["Year"]==2018]
+
+
+customers2018 = customers2018.groupby(['Region','Month'],as_index=False)['NumberOfCustomers'].agg("sum")
+
+
+customers2018 = pd.DataFrame(data = customers2018)
+
+
+
+colors = ['black','gray','red','blue','green','yellow','orange','pink','purple', 'brown', 'cyan']
+
+plt.figure(num=None, figsize=(8, 6), dpi=80, facecolor='w', edgecolor='k')
+plt.grid()
+
+for i in set(customers2018['Region'].tolist()):
+    
+	plt.plot(customers2018[customers2018['Region']==i]['Month'], customers2018[customers2018['Region']==i]['NumberOfCustomers'],color = colors[i], label = 'Region' + str(i))
+    
+	plt.title('Customers in 2018 per Region')
+    
+	plt.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)
