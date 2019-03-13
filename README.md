@@ -1,8 +1,5 @@
 # DMTM_2018
-Data Mining and Text Mining Project 2018
+## Data Mining and Text Mining Project 2018
 
-## Setup
-To run it the first time: ```sudo docker run -it --name=dmtm -v $HOME:/home/jovyan/work -p 8888:8888 phisco/dmtm-2018```
-then: ```sudo docker run dmtm```
-
+Project done in collaboration with the Bip company in Milan.  The goal of the project is to provide a workingforecast model that can be used by a retailers to optimize promotions and warehouse stocks.
 
